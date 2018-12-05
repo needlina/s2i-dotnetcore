@@ -80,7 +80,8 @@ CMD "./${DOTNET_DEFAULT_CMD}"
 # random UID.
 RUN chown -R 1001:0 /opt/app-root && fix-permissions /opt/app-root
 
-ENTRYPOINT [ "container-entrypoint" ]
+#ENTRYPOINT [ "container-entrypoint" ]
+ENTRYPOINT [ "dotnet", "out/Hello.dll" ]
 
 # Run container by default as user with id 1001 (default)
 USER 1001
