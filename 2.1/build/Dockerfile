@@ -53,6 +53,8 @@ ENV DOTNET_SDK_BASE_VERSION=2.1.300 \
 # Make all sdks aware of the latest ASP.NET Core version
     LatestPatchVersionForAspNetCoreApp2_1=2.1.6 \
     LatestPatchVersionForAspNetCoreAll2_1=2.1.6
+    
+ENTRYPOINT [ "dotnet", "out/Hello.dll" ]
 
 # Run container by default as user with id 1001 (default)
 USER 1001
